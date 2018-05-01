@@ -1,6 +1,6 @@
 from tkinter import *
 
-# Constantes para as dimenssões do Canvas
+# Constantes para as dimensões do Canvas
 CANVAS_X, CANVAS_Y = 360, 450
 
 #---------------------------------
