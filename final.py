@@ -1,3 +1,5 @@
+import os
+
 from tkinter import *
 
 # Constantes para as dimensões do Canvas
@@ -193,19 +195,19 @@ class Animation:
         self.imagens_entrada = []
         self.imagens_loop = []
         self.imagens_saida = []
-        self.imagem_parada = PhotoImage(file = 'sprites\pinheiro\pinheiro_parado.png')
+        self.imagem_parada = PhotoImage(file = os.path.join('sprites','pinheiro','pinheiro_parado.png'))
 
         # Loop para armazenar as imagens de entrada
         for i in range(5):
-            self.imagens_entrada.append(PhotoImage(file = 'sprites\pinheiro\pinheiro_entrada_%d.png' %i))
+            self.imagens_entrada.append(PhotoImage(file = os.path.join('sprites','pinheiro','pinheiro_entrada_%d.png' %i)))
 
         # Loop para armazenar as imagens de meio(loop)
         for i in range(3):
-            self.imagens_loop.append(PhotoImage(file = 'sprites\pinheiro\pinheiro_loop_%d.png' %i))
+            self.imagens_loop.append(PhotoImage(file = os.path.join('sprites','pinheiro','pinheiro_loop_%d.png' %i)))
 
         # Loop para armazenar as imagens de saida
         for i in range(6):
-            self.imagens_saida.append(PhotoImage(file = 'sprites\pinheiro\pinheiro_saida_%d.png' %i))
+            self.imagens_saida.append(PhotoImage(file = os.path.join('sprites','pinheiro','pinheiro_saida_%d.png' %i)))
 
         #--------------
         # MARIO ANDANDO
@@ -213,15 +215,15 @@ class Animation:
         # Vetores e variavel para armazenar as imagens do Mario
         self.imagens_mario_esquerda = []
         self.imagens_mario_direita = []
-        self.imagens_mario_parado = [PhotoImage(file = 'sprites\mario\m_left_stop.png'), PhotoImage(file = 'sprites\mario\m_right_stop.png')]
+        self.imagens_mario_parado = [PhotoImage(file = os.path.join('sprites','mario','m_left_stop.png')), PhotoImage(file = os.path.join('sprites','mario','m_right_stop.png'))]
 
         # Loop para armazenar as imagens do mario de esquerda
         for i in range(3):
-            self.imagens_mario_esquerda.append(PhotoImage(file = 'sprites\mario\m_left_%d.png' %i))
+            self.imagens_mario_esquerda.append(PhotoImage(file = os.path.join('sprites','mario','m_left_%d.png' %i)))
 
         # Loop para armazenar as imagens do mario de direita
         for i in range(3):
-            self.imagens_mario_direita.append(PhotoImage(file = 'sprites\mario\m_right_%d.png' %i))
+            self.imagens_mario_direita.append(PhotoImage(file = os.path.join('sprites','mario','m_right_%d.png' %i)))
 
     # ---------------------------------
     # FUNÇÕES PARA A ANIMAÇÃO DA ARVORE
